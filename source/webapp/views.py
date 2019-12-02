@@ -1,24 +1,4 @@
-# from django.shortcuts import render
-# import json
-# from datetime import datetime
-# from django.http import HttpResponse
-# from django.views.decorators.csrf import csrf_exempt
-
-
-
-# @csrf_exempt
-# def json_echo_view(request, *args, **kwargs):
-#     answer = {
-#         'time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-#         'method': request.method,
-#     }
-#     answer_as_json = json.dumps(answer)
-#     response = HttpResponse(answer_as_json)
-#     response['Content-Type'] = 'application/json'
-#     return response
-
 import json
-from datetime import datetime
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -46,16 +26,6 @@ def api_example(request, *args, **kwargs):
         response = HttpResponse(answer)
         return response
 
-    # elif request.method == "GET":
-    #     if request.body:
-    #         request_data = json.loads(request.body)
-    #     data = {
-    #         'method': request.method,
-    #         'time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-    #         'content': request_data
-    #     }
-    #     print(data)
-    #     return JsonResponse(data)
 
 @csrf_exempt
 def subtract(request, *args, **kwargs):
@@ -70,16 +40,6 @@ def subtract(request, *args, **kwargs):
         response = HttpResponse(answer)
         return response
 
-    # elif request.method == "GET":
-    #     if request.body:
-    #         request_data = json.loads(request.body)
-    #     data = {
-    #         'method': request.method,
-    #         'time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-    #         'content': request_data
-    #     }
-    #     print(data)
-    #     return JsonResponse(data)
 
 @csrf_exempt
 def multiply(request, *args, **kwargs):
@@ -97,16 +57,6 @@ def multiply(request, *args, **kwargs):
         response = HttpResponse(answer)
         return response
 
-    # elif request.method == "GET":
-    #     if request.body:
-    #         request_data = json.loads(request.body)
-    #     data = {
-    #         'method': request.method,
-    #         'time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-    #         'content': request_data
-    #     }
-    #     print(data)
-    #     return JsonResponse(data)
 
 @csrf_exempt
 def divide(request, *args, **kwargs):
@@ -134,14 +84,4 @@ def divide(request, *args, **kwargs):
         response = HttpResponse(answer)
         return response
 
-    # elif request.method == "GET":
-    #     if request.body:
-    #         request_data = json.loads(request.body)
-    #     data = {
-    #         'method': request.method,
-    #         'time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-    #         'content': request_data
-    #     }
-    #     print(data)
-    #     return JsonResponse(data)
 # Create your views here.

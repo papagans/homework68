@@ -1,17 +1,4 @@
-// var i = 1;
-// function pashArman() {
-//     div = document.createElement('div');
-//     div.className = 'element';
-//     text = document.createTextNode("Element " + i.toString());
-//     div.appendChild(text);
-//     document.getElementById("container").appendChild(div);
-//     i += 1;
-//     var letters = ['red', 'green', 'purple', 'blue', 'yellow'];
-//     var cvet = '';
-//     cvet += letters[Math.floor(Math.random() * 5)];
-//     div.style.color = cvet;
-//     console.log(cvet)
-// }
+
 const container = document.getElementById("container");
 var math = ["add", "subtract", "multiply", "divide"];
 
@@ -25,11 +12,6 @@ function pashArman(){
         num2.setAttribute('id', 'num2');
         container.appendChild(num2);
      for (var i = 0; i < math.length; i++) {
-        // var div = document.createElement('div');
-        // div.className = 'element';
-        // var text = document.createTextNode("Element " + math[i]);
-        // div.appendChild(text);
-        // container.appendChild(div);
         let countryLink = document.createElement('button');
         countryLink.setAttribute('id', math[i]);
         countryLink.append(math[i]);
